@@ -30,7 +30,7 @@ struct KeyboardOffsetModifier: ViewModifier {
 extension View {
     /// Create some offset for the keyboard when visible
     /// - Returns: KeyboardOffsetModifier
-    func enableKeyboardOffset() -> ModifiedContent<Self, KeyboardOffsetModifier> {
+    public func enableKeyboardOffset() -> ModifiedContent<Self, KeyboardOffsetModifier> {
         return modifier(KeyboardOffsetModifier())
     }
 }

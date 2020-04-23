@@ -19,7 +19,7 @@ struct KeyboardDismissModifier: ViewModifier {
 extension View {
     /// Dismiss the keyboard when pressing on something different then a form field
     /// - Returns: KeyboardDismissModifier
-    func hideKeyboardOnTap() -> ModifiedContent<Self, KeyboardDismissModifier> {
+    public func hideKeyboardOnTap() -> ModifiedContent<Self, KeyboardDismissModifier> {
         return modifier(KeyboardDismissModifier())
     }
 }

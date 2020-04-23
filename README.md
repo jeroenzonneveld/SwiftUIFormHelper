@@ -3,15 +3,16 @@ Helper functions for creating forms with SwiftUI
 
 ## Features
 
-- Helper to create space for the keyboard when visible
+- Helper to create some offset for the keyboard when visible
 - Helper to dismiss the keyboard when pressing on something different then a form field
 
-### Space for keyboard
+### Create offset for keyboard
 
 Simply add the helper function `.enableKeyboardOffset()` after the Form {}.
 
 ```swift
 import SwiftUI 
+import SwiftUIFormHelper
 
 Form {
 
@@ -24,6 +25,7 @@ Simply add the helper function `.hideKeyboardOnTap()` after the Form {}.
 
 ```swift
 import SwiftUI 
+import SwiftUIFormHelper
 
 Form {
 
