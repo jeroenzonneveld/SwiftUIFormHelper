@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct KeyboardDismissModifier: ViewModifier {
+public struct KeyboardDismissModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content.onTapGesture {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct KeyboardOffsetModifier: ViewModifier {
+public struct KeyboardOffsetModifier: ViewModifier {
     @State private var keyboardOffset: CGFloat = 0
     
     func body(content: Content) -> some View {
