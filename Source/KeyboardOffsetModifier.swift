@@ -10,7 +10,7 @@ import SwiftUI
 public struct KeyboardOffsetModifier: ViewModifier {
     @State private var keyboardOffset: CGFloat = 0
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .padding(.bottom, keyboardOffset)
             .onAppear {
