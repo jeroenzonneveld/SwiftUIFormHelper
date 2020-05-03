@@ -20,14 +20,14 @@ public class FormValidator {
         return text.count >= characters
     }
     
-    public static func isValidEmail(_ email: String) -> Bool {
+    public static func isValid(email: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", regex)
         
         return emailPredicate.evaluate(with: email)
     }
     
-    public static func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
+    public static func isValid(phoneNumber: String) -> Bool {
         let regex = "^[0-9+]{0,1}+[0-9]{5,16}$"
         let phonePredicate = NSPredicate(format: "SELF MATCHES %@", regex)
         

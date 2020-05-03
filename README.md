@@ -5,6 +5,7 @@ Helper functions for creating forms with SwiftUI
 
 - Helper to create some offset for the keyboard when visible
 - Helper to dismiss the keyboard when pressing on something different then a form field
+- FormValidator to validate input
 
 ### Create offset for keyboard
 
@@ -30,4 +31,18 @@ import SwiftUIFormHelper
 Form {
 
 }.hideKeyboardOnTap()
+```
+
+### Form Validator
+
+Validate input from fields.
+
+```swift
+import SwiftUIFormHelper
+
+let email = "fake@mailinator.com"
+FormValidator.isValid(email: email)
+
+let phoneNumber = "+31612345678"
+FormValidator.isValid(phoneNumber: phoneNumber)
 ```
