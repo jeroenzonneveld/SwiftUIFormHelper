@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 13, *)
 public struct KeyboardOffsetModifier: ViewModifier {
     @State private var keyboardOffset: CGFloat = 0
     
@@ -27,6 +28,7 @@ public struct KeyboardOffsetModifier: ViewModifier {
     }
 }
 
+@available(iOS 13, *)
 extension View {
     /// Create some offset for the keyboard when visible
     /// - Returns: KeyboardOffsetModifier
