@@ -29,8 +29,9 @@ import SwiftUI
 import SwiftUIFormHelper
 
 Form {
-
-}.hideKeyboardOnTap()
+    TextField("Name", text: $name)
+        .hideKeyboardOnTap()
+}
 ```
 
 ### Form Validator

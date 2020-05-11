@@ -18,7 +18,7 @@ public struct KeyboardDismissModifier: ViewModifier {
 }
 
 @available(iOS 13, *)
-extension View {
+extension TextField {
     /// Dismiss the keyboard when pressing on something different then a form field
     /// - Returns: KeyboardDismissModifier
     public func hideKeyboardOnTap() -> ModifiedContent<Self, KeyboardDismissModifier> {
