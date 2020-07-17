@@ -1,7 +1,7 @@
 # SwiftUIFormHelper
 Helper functions for creating forms with SwiftUI
 
-## Install
+## Installation
 
 ### Swift Package Manager
 Once you have your Swift package set up, adding SwiftUIFormHelper as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
