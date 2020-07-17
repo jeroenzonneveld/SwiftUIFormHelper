@@ -1,6 +1,17 @@
 # SwiftUIFormHelper
 Helper functions for creating forms with SwiftUI
 
+## Installation
+
+### Swift Package Manager
+Once you have your Swift package set up, adding SwiftUIFormHelper as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/jeroenzonneveld/SwiftUIFormHelper", .upToNextMajor(from: "1.2.0"))
+]
+```
+
 ## Features
 
 - Helper to create some offset for the keyboard when visible
@@ -9,7 +20,7 @@ Helper functions for creating forms with SwiftUI
 
 ### Create offset for keyboard
 
-Simply add the helper function `.enableKeyboardOffset()` after the Form {}.
+Simply add the helper function `.enableKeyboardOffset()` after a Form.
 
 ```swift
 import SwiftUI 
@@ -22,7 +33,7 @@ Form {
 
 ### Dismiss keyboard on tap
 
-Simply add the helper function `.hideKeyboardOnTap()` after the Form {}.
+Simply add the helper function `.hideKeyboardOnTap()` after a Textfield.
 
 ```swift
 import SwiftUI 
@@ -36,7 +47,9 @@ Form {
 
 ### Form Validator
 
-Validate input from fields.
+Validate input from fields. Currenlty supported:
+- email
+- phoneNumber
 
 ```swift
 import SwiftUIFormHelper
