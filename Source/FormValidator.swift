@@ -36,8 +36,8 @@ public class FormValidator {
     
     public static func isValid(url: String) -> Bool {
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-        if let match = detector.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) {
-            return match.range.length == self.utf16.count // it is a link if the match covers the whole string
+        if let match = detector.firstMatch(in: url, options: [], range: NSRange(location: 0, length: url.count)) {
+            return match.range.length == url.count // it is a link if the match covers the whole string
         } else {
             return false
         }
