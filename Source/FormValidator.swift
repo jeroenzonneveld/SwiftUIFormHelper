@@ -35,9 +35,11 @@ public class FormValidator {
     }
     
     public static func isValid(url: String) -> Bool {
-        let regex = "((?:http|https)://)?(?:www\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
-        let urlPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        
-        return urlPredicate.evaluate(with: url)
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        if let match = detector.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) {
+            return match.range.length == self.utf16.count // it is a link if the match covers the whole string
+        } else {
+            return false
+        }
     }
 }
