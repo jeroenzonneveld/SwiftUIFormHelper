@@ -8,7 +8,7 @@ Once you have your Swift package set up, adding SwiftUIFormHelper as a dependenc
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/jeroenzonneveld/SwiftUIFormHelper", .upToNextMajor(from: "1.2.0"))
+    .package(url: "https://github.com/jeroenzonneveld/SwiftUIFormHelper", .upToNextMajor(from: "1.3.0"))
 ]
 ```
 
@@ -47,9 +47,14 @@ Form {
 
 ### Form Validator
 
-Validate input from fields. Currenlty supported:
-- email
-- phoneNumber
+Validate input from fields. Currently supported:
+- isNotEmpty
+- isEmpty
+- hasMinimium(characters)
+- isValid
+    - email
+    - phoneNumber
+    - url
 
 ```swift
 import SwiftUIFormHelper
@@ -59,4 +64,7 @@ FormValidator.isValid(email: email)
 
 let phoneNumber = "+31612345678"
 FormValidator.isValid(phoneNumber: phoneNumber)
+
+let url = "apple.com"
+FormValidator.isValid(url: url)
 ```
